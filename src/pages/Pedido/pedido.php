@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faça o pedido | Pedidos Online</title>
+    <title>Faça o pedido | PedidosOnline</title>
     <link rel="stylesheet" href="../../../index.css">
     
     <link rel="stylesheet" href="./pedidoStyle.css">
@@ -22,12 +22,14 @@
 
             $horario = date("H:i:s");
             $status = 0;
+            $id = uniqid();
+            echo "$id";
             
             include_once("../../scripts/php/config.php");
 
-            mysqli_query($conexao, "INSERT INTO pedidos(Nome, Endereco, Numero, Pedido, Horario, StatusDoPedido) VALUES ('$nome', '$endereco', '$numero', '$pedido', '$horario', '$status')");
+            mysqli_query($conexao, "INSERT INTO pedidos(Nome, Endereco, Numero, Pedido, Horario, StatusDoPedido, id) VALUES ('$nome', '$endereco', '$numero', '$pedido', '$horario', '$status', '$id')");
 
-            echo "Tudo certo";
+            header("Location: http://localhost/PedidosOnlinePHP/src/pages/Pedido/pedidoDetails.php?id=$id");
 
         };
 
