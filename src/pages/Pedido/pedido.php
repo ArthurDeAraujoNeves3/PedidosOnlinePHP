@@ -16,10 +16,21 @@
         $endereco = $_REQUEST["endereco"] ?? "";
         $numero = $_REQUEST["numero"] ?? "";
         $pedido = $_REQUEST["pedido"] ?? "";
+        
+        if ( isset($_POST["submit"]) ) {
+
+            $horario = date("H:i:s");
+            $status = 0;
+            
+            include_once("../../scripts/php/config.php");
+
+            mysqli_query($conexao, "INSERT INTO pedidos(Nome, Endereco, Numero, Pedido, Horario, StatusDoPedido) VALUES ('$nome', '$endereco', '$numero', '$pedido', '$horario', '$status')");
+
+        };
 
     ?>
 
-    <form class="formPedido" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" >
+    <form class="formPedido" onsubmit="sendToDB()" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" >
         
         <input type="text" placeholder="Seu nome" name="nome" id="nome" value="<?php echo $nome ?>" />
         <input type="text" placeholder="Endereço" name="endereco" id="endereco" value="<?php echo $endereco ?>" />
@@ -33,7 +44,7 @@
 
         </select> <!--Produtos da loja-->
 
-        <button class="buttonPO">Enviar pedido</button>
+        <button class="buttonPO" name="submit" >Enviar pedido</button>
         
     </form>
     
