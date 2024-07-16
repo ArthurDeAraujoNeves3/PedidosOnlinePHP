@@ -1,11 +1,18 @@
 :root {
 
     --bg: #1b1b1b;
+    --details: #272727;
     --theme: #d1ff03;
-    --text: white;
+    --text: #ffffff;
+    --error: #ff1e00;
 
+    --borderWidth: 2px;
     --borderRadius: 10px;
     --gap: 10px;
+    --gap2: 5px;
+
+    --titleSize: 20px;
+
 }
 
 /*Reset*/
@@ -32,6 +39,17 @@ body {
     overflow-x: hidden;
 }
 
+.Logo, .LogoOnline {
+
+    font-size: var(--titleSize);
+
+}
+.LogoOnline {
+
+    color: var(--theme);
+
+}
+
 .buttonPO {
 
     max-width: 100%;
@@ -49,4 +67,38 @@ body {
 .buttonPO:hover {
 
     filter: brightness(90%);
+}
+
+input, select {
+
+    max-width: 100%;
+    width: 350px;
+    height: 40px;
+    border-radius: var(--borderRadius);
+    border-width: var(--borderWidth);
+    border-color: white;
+    border-style: solid;
+    outline: none;
+    padding: 0px 10px;
+    font-family: "text";
+    transition: 0.2s;
+}
+input:focus, select:focus {
+
+    border-color: var(--theme);
+}
+.inputError, .selectError {
+
+    max-width: 100%;
+    width: 350px;
+    height: 40px;
+    border-radius: var(--borderRadius);
+    border-width: var(--borderWidth);
+    border-color: var(--error);
+    border-style: solid;
+    outline: none;
+    padding: 0px 10px;
+    font-family: "text";
+    transition: 0.2s;
+
 }
