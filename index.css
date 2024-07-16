@@ -1,0 +1,52 @@
+:root {
+
+    --bg: #1b1b1b;
+    --theme: #d1ff03;
+    --text: white;
+
+    --borderRadius: 10px;
+    --gap: 10px;
+}
+
+/*Reset*/
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+@font-face {
+
+    font-family: "text";
+    src: url("./src/fonts/Geist-SemiBold.otf");
+}
+
+body {
+
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "text";
+    overflow-x: hidden;
+}
+
+.buttonPO {
+
+    max-width: 100%;
+    min-width: 150px;
+    height: 40px;
+    background-color: var(--theme);
+    border-radius: var(--borderRadius);
+    padding: 10px;
+    border-width: 0px;
+    font-family: "text";
+    color: #1b1b1b;
+    text-align: center;
+    transition: 0.2s;
+}
+.buttonPO:hover {
+
+    filter: brightness(90%);
+}
