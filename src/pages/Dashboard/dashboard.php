@@ -11,11 +11,18 @@
 
     <?php
 
+        include_once("../../scripts/php/VerifyLogin.php");
+        include_once("../../scripts/php/config.php");
 
+        function gettingOrders() {
+
+            
+
+        };
 
     ?>
 
-    <p>Dashboard
+    <p>Dashboard</p>
     
 </body>
 </html>

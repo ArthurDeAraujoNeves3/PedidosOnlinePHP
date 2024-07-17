@@ -13,8 +13,8 @@
 
         /*explode() vai separar uma string a partir de algum ponto. Exemplo
 
-            1| /PedidosOnlinePHP/src/pages/Pedido/pedidoDetails.php?id=85472722
-            2| $var = explode("=", ...);
+            1| $url = /PedidosOnlinePHP/src/pages/Pedido/pedidoDetails.php?id=85472722
+            2| $var = explode("=", $url);
             3| $var[0] => /PedidosOnlinePHP/src/pages/Pedido/pedidoDetails.php?id
             4| $var[1] => 85472722
 

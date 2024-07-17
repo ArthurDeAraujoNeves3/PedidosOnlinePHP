@@ -1,5 +1,3 @@
-const button = document.getElementById("buttonForm");
-
 function verifyInputs() {
 
     const inputName = document.getElementById("nome");
@@ -78,8 +76,8 @@ function verifyInputs() {
 
         event.preventDefault();
         return;
-    } 
-    
-    return false; 
+    };
+
+    return isValid; 
 
 };

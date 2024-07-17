@@ -18,12 +18,11 @@
         $pedido = $_REQUEST["pedido"] ?? "";
         
         //isset verifica se a variável é diferente de null, e retorna como true ou false
-        if ( isset($_POST["submit"]) ) {
+        if ( isset($_REQUEST["submit"]) ) {
 
             $horario = date("H:i:s");
             $status = 0;
             $id = uniqid();
-            echo "$id";
             
             include_once("../../scripts/php/config.php");
 
@@ -55,7 +54,7 @@
 
         </div> <!--Inputs-->
 
-        <button class="buttonPO" name="submit" id="buttonForm">Enviar pedido</button>
+        <button class="buttonPO" name="submit" onclick="verifyInputs()">Enviar pedido</button>
         
     </form>
 
