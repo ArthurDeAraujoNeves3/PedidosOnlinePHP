@@ -12,6 +12,7 @@
     --gap2: 5px;
 
     --titleSize: 20px;
+    --subtitle: 12px;
 
 }
 
@@ -50,7 +51,7 @@ body {
 
 }
 
-.buttonPO {
+.buttonPO, input[type="submit"] {
 
     max-width: 100%;
     min-width: 150px;

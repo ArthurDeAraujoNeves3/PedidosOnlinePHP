@@ -1,0 +1,47 @@
+.pedido {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.pedido div {
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 500px;
+    height: 60px;
+    border-right-width: var(--borderWidth);
+    border-right-color: var(--details);
+    border-right-style: solid;
+    border-bottom-width: var(--borderWidth);
+    border-bottom-color: var(--details);
+    border-bottom-style: solid;
+    border-top-width: var(--borderWidth);
+    border-top-color: var(--details);
+    border-top-style: solid;
+
+}
+
+.naoAtendido {
+
+    color: var(--error);
+
+}
+.atendido {
+
+    color: greenyellow;
+
+}
+
+.title {
+
+    color: var(--theme);
+    font-size: var(--subtitle);
+
+}
