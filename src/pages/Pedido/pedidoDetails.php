@@ -34,7 +34,20 @@
             $endereco = $data["Endereco"];
             $pedido = $data["Pedido"];
             $horario = $data["Horario"];
+            $StatusClass = "naoAtendido";
             $StatusDoPedido = $data["StatusDoPedido"];
+
+            if ( $StatusDoPedido == 0 ) {
+
+                $StatusClass = "naoAtendido";
+                $StatusDoPedido = "Não atendido";
+
+            } else {
+
+                $StatusClass = "atendido";
+                $StatusDoPedido = "Atendido";
+
+            };
 
             echo "
                 <div class='pedidoInfo'>
@@ -47,7 +60,7 @@
                         <p>Endereço: <span>$endereco</span></p>
                         <p>Seu pedido: <span>$pedido</span></p>
                         <p>Pedido feito: <span>$horario</span></p>
-                        <p>Status: <span>$StatusDoPedido</span></p>
+                        <p>Status: <span class='$StatusClass'>$StatusDoPedido</span></p>
 
                     </div>
 

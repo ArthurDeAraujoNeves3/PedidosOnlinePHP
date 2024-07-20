@@ -21,9 +21,13 @@
     
 }
 
-/*Informações do pedido*/
-div p span {
+.naoAtendido {
 
-    color: var(--theme);
+    color: var(--error);
+
+}
+.atendido {
+
+    color: greenyellow;
 
 }

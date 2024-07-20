@@ -6,6 +6,7 @@
     <title>Dashboard | PedidosOnline</title>
     <link rel="stylesheet" href="../../../index.css">
     <link rel="stylesheet" href="./dashboardStyle.css">
+    <script src="https://kit.fontawesome.com/de909c33c7.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -92,7 +93,7 @@
                             <div><p class='title'>Pedido</p><p>$pedido</p></div>
                             <div><p class='title'>Pedido feito</p><p>$horario</p></div>
                             <div><p class='title'>Status</p><p class='$StatusClass'>$StatusDoPedido</p></div>
-                            <a href='$currentPage?id=$id'>ALTERAR STATUS</a>
+                            <div><a class='statusButton' href='$currentPage?id=$id'><span class='pen'><i class='fa-solid fa-pen'></i></span></a></div>
                             
                         </div>
 
@@ -117,7 +118,7 @@
 
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 
-            <input type="submit" value="Puxar dados" name="reload"  />
+            <input type="submit" value="Atualizar dados" name="reload"  />
 
         </form>
 
